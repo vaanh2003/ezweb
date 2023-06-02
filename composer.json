@@ -1,5 +1,5 @@
 {
-    "name": "hungn/larava",
+    "name": "hungn/z",
     "autoload": {
         "psr-4": {
             "larava\\": "app/"

@@ -1,5 +1,5 @@
 <?php
-namespace larava\controllers;
+namespace zz\controllers;
 use larava\core\Controller;
 class AboutController extends Controller{
     //Action

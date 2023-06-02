@@ -3,6 +3,7 @@ use larava\core\Router;
 use larava\controllers\AboutController;
 use larava\controllers\ContactController;
 use larava\controllers\CategoryController;
+use larava\controllers\VideoController;
 
 $router=new Router;
 
@@ -11,6 +12,9 @@ $router->get("/",function(){
 });
 
 $router->get("/about",[AboutController::class,"index"]);
+
+$router->get("/video",[VideoController::class,"index"]);
+
 $router->get("/contact",[ContactController::class,"form"]);
 
 $router->get("/category",[CategoryController::class,"index"]);
