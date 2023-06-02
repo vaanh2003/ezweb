@@ -3,6 +3,11 @@
     font-family: 'Roboto', sans-serif;
     margin: 0px;
     padding: 0px;
+    
+}
+a{
+    text-decoration: none;
+    color:black;
 }
 body{
     position: relative;
@@ -122,26 +127,72 @@ body{
 </style>
 
 <section class="section-video">
+     <?php
+     if($data==""){
+        echo'rong';
+     }
+       
+    ?> 
     <?php
+        foreach ($_SESSION["video"] as $key => $value) {
+                echo '
+                
+                    <div class="item-section-left">
+                        <div class="item-video-left">
+                            <iframe width="80%" height="100%" src="'.$value['link_video'].'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="item-noi-dung">
+                            <div>
+                                <p class="noi-dung">'.$value['ten'].'</p>
+                                <p class="ngay-thang"> cập nhật tháng 2 năm 2023</p>
+                            </div>
+                            <button>+ Thêm vào xem sau</button>
+                        </div>
+                    </div>
+                
+                ';
+            
+        }
+       
+
     ?>
-        <div class="item-section-left">
-            <div class="item-video-left">
-                <iframe width="80%" height="100%" src="https://www.youtube.com/embed/ezTDHifaJ74" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="item-noi-dung">
-                <div>
-                    <p class="noi-dung">Bạn sẽ làm được gì sau khóa học</p>
-                    <p class="ngay-thang"> cập nhật tháng 2 năm 2023</p>
-                </div>
-                <button>+ Thêm vào xem sau</button>
-            </div>
-        </div>
+        
         <div class="item-section-right">
             <div class="list-video-right">
                 <p>Nội dung khóa học</p>
             </div>
             <div class="video-in-list">
-                  <div class="item-video-in-list video-play">
+                
+                <?php
+                
+                    foreach ($data as $key => $value) { ?>
+                        <a href="<?php echo base_url; ?>video?idvd=<?php echo''.$value['id'].''?>">
+                        <?php echo '
+                            <div class="item-video-in-list '; 
+                            foreach ($_SESSION["video"] as $key => $session) {
+                                if($value['id']== $session['id']){
+                                    echo "video-play";
+                                }
+                            }
+                                
+                            
+                            echo '">
+                                <div>
+                                    <p>1. '.$value['ten'].'</p>
+                                    <div>
+                                        <img src="./img/play.png" alt="">
+                                        <p>'.$value['thoi_luong'].'</p>
+                                    </div>  
+                                </div>
+                                <img src="./img/agree-removebg-preview.png" alt="">
+                            </div>
+                        </a>
+                        
+                        ';
+                    }
+
+                ?>
+                  <!-- <div class="item-video-in-list video-play">
                     <div>
                         <p>1. bạn sẽ làm được gì sau khóa học</p>
                         <div>
@@ -150,8 +201,8 @@ body{
                         </div>  
                     </div>
                     <img src="./img/agree-removebg-preview.png" alt="">
-                  </div>
-                  <div class="item-video-in-list video-history">
+                  </div> -->
+                  <!-- <div class="item-video-in-list video-history">
                     <div>
                         <p>1. bạn sẽ làm được gì sau khóa học</p>
                         <div>
@@ -170,7 +221,7 @@ body{
                         </div>  
                     </div>
                     <img src="./img/no-gree.jpg" alt="">
-                  </div>
+                  </div> -->
             </div>
             
         </div>

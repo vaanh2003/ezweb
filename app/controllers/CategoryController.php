@@ -9,7 +9,7 @@ class CategoryController extends Controller{
 
     public function index(){        
         $list=$this->categories::all();       
-        $this->View("category/index",$list);
+        $this->View("category/index",$list,"");
     }
 
     public function addCate(){

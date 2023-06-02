@@ -13,6 +13,6 @@ $capsule->addConnection([
     'prefix' => '',
 ]);
 $capsule->bootEloquent();
-const base_url="http://localhost/larava/"; //http://shop.com
+const base_url="http://localhost/ezweb/"; //http://shop.com
 include_once "routes.php";
 ?>
