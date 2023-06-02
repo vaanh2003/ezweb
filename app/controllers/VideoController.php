@@ -2,6 +2,7 @@
 namespace larava\controllers;
 use larava\core\Controller;
 class VideoController extends Controller{
+    public $categories; 
     public function __construct(){
         $this->categories=$this->Model('VideoModel');
     }
