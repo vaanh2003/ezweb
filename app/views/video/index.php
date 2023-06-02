@@ -120,7 +120,10 @@ body{
     border-radius: 5px;
 }  
 </style>
+
 <section class="section-video">
+    <?php
+    ?>
         <div class="item-section-left">
             <div class="item-video-left">
                 <iframe width="80%" height="100%" src="https://www.youtube.com/embed/ezTDHifaJ74" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
