@@ -14,6 +14,7 @@ $router->get("/",function(){
 $router->get("/about",[AboutController::class,"index"]);
 
 $router->get("/video",[VideoController::class,"index"]);
+$router->post("/video",[VideoController::class,"dieuhuong"]);
 
 $router->get("/contact",[ContactController::class,"form"]);
 

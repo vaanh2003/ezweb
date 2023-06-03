@@ -12,6 +12,7 @@ a{
 body{
     position: relative;
     overflow: hidden;
+    height: 100vh;
 }
 .video-in-list{
     padding-left: 15px;
@@ -124,6 +125,37 @@ body{
     border: none;
     border-radius: 5px;
 }  
+.item-button-section{
+    position: absolute;
+    width: 100%;
+    bottom: 0px ;
+    height: 50px;
+    background-color: #F0F0F0;
+}
+.item-button-section div{
+    display: flex;
+    align-items: center;
+    width: 295px;
+    height: 100%;
+    margin: 0 auto;
+}
+.button-left{
+    width: 145px;
+    height: 32px;
+    border: none;
+    padding-right: 10px;
+    font-size: 14px;
+}
+.button-right{
+    width: 145px;
+    height: 35px;
+    padding-left: 10px;
+    color: white;
+    background-color: #F05123;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
 </style>
 
 <section class="section-video">
@@ -149,6 +181,8 @@ body{
                             <button>+ Thêm vào xem sau</button>
                         </div>
                     </div>
+                    <form method="post">
+                        <input type="hidden" name="idvd" value="'.$value['id'].'">
                 
                 ';
             
@@ -188,6 +222,7 @@ body{
                             </div>
                         </a>
                         
+                        
                         ';
                     }
 
@@ -226,3 +261,10 @@ body{
             
         </div>
     </section>
+    <div class="item-button-section">
+        <div>
+                 <input class="button-left" type="submit" value="< BÀI TRƯỚC" name="baitruoc">
+                <input class="button-right" type="submit" value="BÀI TIẾP THEO >" name="baitiep">
+            </form>
+        </div>  
+    </div>

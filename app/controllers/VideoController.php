@@ -3,7 +3,8 @@ namespace larava\controllers;
 use larava\core\Controller;
 class VideoController extends Controller{
     public $categories; 
-    public $video; 
+    public $video;
+    public $idvd; 
     public function __construct(){
         $this->categories=$this->Model('VideoModel');
     }
@@ -18,5 +19,18 @@ class VideoController extends Controller{
             ]); 
         }   
         $this->View("video/index",$list);
+    }
+    public function dieuhuong(){
+        if(isset($_POST['baitiep'])){
+            $idvd=isset($_GET['idvd'])?$_GET['idvd']:"";
+            $idvd+=1;
+            header("location:/ezweb/video?idvd=".$idvd."");
+        }
+        if(isset($_POST['baitruoc'])){
+            $idvd=isset($_GET['idvd'])?$_GET['idvd']:"";
+            $idvd-=1;
+            header("location:/ezweb/video?idvd=".$idvd."");
+        }
+
     }
 }
