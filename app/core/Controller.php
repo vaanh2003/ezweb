@@ -11,7 +11,7 @@ class Controller{
         include "app/views/layout/$layout.php";
         return ob_get_clean();
     }
-    public function OnlyView($view,$data=[]){
+    public function OnlyView($view,$data=[],$datathem=[]){
         ob_start();
         include "app/views/$view.php";
         return ob_get_clean();

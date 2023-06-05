@@ -27,85 +27,58 @@
             <div class="AppSidebarContentChild">
                 <h2 class="">CÂU HỎI</h2>
                 <div class="question-content">
-                    <div class="question">
-                        <div class="question-item">
-                            <div class="question-item-one">
-                                <div class="question-name-user">
-                                    <img class="img-user" src="./img/good-review.png" alt="">
-                                    <p>Trần Văn Anh</p>
-                                </div>
-                                <div class="dropdown ">
-                                    <button class="btn btn-secondary " type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
-                                            <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
-                                        </svg>
-                                    </button>
-                                    <ul class="dropdown-menu dropdown-menu-end">
-                                        <li><a class="dropdown-item" href="#">Xóa câu hỏi</a></li>
-                                        <li><a class="dropdown-item" href="#">Sửa câu hỏi</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="question-item-tow">
-                                <h4>nội dung câu hỏi aaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</h4>
-                                <div class="date-time">
-                                    <p>Ngày tháng năm</p>
-                                    <div class="number-cmt">
-                                        <p>1</p>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-left-dots" viewBox="0 0 16 16">
-                                            <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-                                            <path d="M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
-                                        </svg>
+                    <?php
+                        foreach ($data as $key => $value) {
+                            echo "
+                                <div class='question'>
+                                    <div class='question-item'>
+                                        <div class='question-item-one'>
+                                            <div class='question-name-user'>
+                                                <img class='img-user' src='./img/good-review.png' alt=''>
+                                                <p>Trần Văn Anh</p>
+                                            </div>
+                                            <div class='dropdown '>
+                                                <button class='btn btn-secondary ' type='button' data-bs-toggle='dropdown' aria-expanded='false'>
+                                                    <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-three-dots' viewBox='0 0 16 16'>
+                                                        <path d='M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z'/>
+                                                    </svg>
+                                                </button>
+                                                <ul class='dropdown-menu dropdown-menu-end'>
+                                                    <li><a class='dropdown-item' href='#'>Xóa câu hỏi</a></li>
+                                                    <li><a class='dropdown-item' href='#'>Sửa câu hỏi</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class='question-item-tow'>
+                                            <h4>".$value['noi_dung']."</h4>
+                                            <div class='date-time'>
+                                                <p>".$value['ngay_gio']."</p>
+                                                <div class='number-cmt'>
+                                                    <p>".$value['tra_loi']."</p>
+                                                    <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-chat-left-dots' viewBox='0 0 16 16'>
+                                                        <path d='M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z'/>
+                                                        <path d='M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z'/>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="question">
-                        <div class="question-item">
-                            <div class="question-item-one">
-                                <div class="question-name-user">
-                                    <img class="img-user" src="./img/good-review.png" alt="">
-                                    <p>Trần Văn Anh</p>
-                                </div>
-                                <div class="dropdown ">
-                                    <button class="btn btn-secondary " type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
-                                            <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
-                                        </svg>
-                                    </button>
-                                    <ul class="dropdown-menu dropdown-menu-end">
-                                    <li><a class="dropdown-item" href="#">Xóa</a></li>
-                                    <li><a class="dropdown-item" href="#">Sửa</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="question-item-tow">
-                                <h4>nội dung câu hỏi aaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</h4>
-                                <div class="date-time">
-                                    <p>Ngày tháng năm</p>
-                                    <div class="number-cmt">
-                                        <p>1</p>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-left-dots" viewBox="0 0 16 16">
-                                            <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-                                            <path d="M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                            
+                            ";
+                        }
+                    
+                    ?>
                     
                 </div>
             </div>
-            <div class="sidebar-content-child">
-                <div class="button-container">
+            <div class='sidebar-content-child'>
+                <div class='button-container'>
                     <button>Đặt câu hỏi</button>
                     <button>Đăng Blog</button>
                 </div>
-                <div class="banner-container">
-                    <img src="https://inkythuatso.com/uploads/thumbnails/800/2022/03/anh-genshin-impact-4k-klee-17-10-24-48.jpg" alt="">
+                <div class='banner-container'>
+                    <img src='https://inkythuatso.com/uploads/thumbnails/800/2022/03/anh-genshin-impact-4k-klee-17-10-24-48.jpg' alt=''>
                 </div>
             </div>
         </div>

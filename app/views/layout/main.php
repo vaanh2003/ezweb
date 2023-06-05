@@ -360,6 +360,9 @@
         align-items: center;
         justify-content: space-between;
     }
+    .date-time p{
+        font-size:15px;
+    }
     .date-time svg{
         margin-top: 2px;
         margin-right: 5px;
