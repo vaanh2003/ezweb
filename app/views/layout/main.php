@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EZWeb</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
 
@@ -305,6 +306,112 @@
             margin-left: -8px;
             margin-right: -8px;
         }
+    }
+    /* mới */
+    .App_withSidebarContent__o4VlQ-db{
+        display: flex;
+    }
+    .AppSidebarContentChild{
+        padding-left: 90px;
+        width: 65%;
+    }
+    .question-item{
+        padding: 25px 25px 20px 25px;
+        height: 70%;
+        width: 100%;
+    }
+    .question{
+        width: 100%;
+        height: auto;
+        border-radius: 13px;
+        background-color: #f5f5f5;
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .question-item-one{
+        display: flex;
+        justify-content: space-between;
+    }
+    .question-name-user{
+        display: flex;
+        align-items: center;
+    }
+    .question-name-user img{
+        width: 30px;
+        height: 30px;
+    }
+    .question-name-user p{
+        margin-left: 10px;
+        font-size: 12px;
+        margin-bottom: 0;
+    }
+    .question-item-one{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .question-item-one button{
+        background-color: #f5f5f5;
+        border: none;
+    }
+    .date-time{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .date-time svg{
+        margin-top: 2px;
+        margin-right: 5px;
+    }
+    .number-cmt{
+        display: flex;
+        align-items: center;
+    }
+    .number-cmt p{
+        margin-right: 3px;
+        margin-bottom: 0;
+    }
+    .dropdown button{
+        background-color: #f5f5f5;
+        color: #000;
+    }
+    .dropdown button:hover{
+        background-color: #f5f5f5;
+    }
+    .dropdown-menu{
+        position: absolute;
+        padding-left: 100px;
+    }
+    .button-container{
+        width: 360px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+    .button-container button{
+        width: 165px;
+        height: 65px;
+        border-radius: 15px;
+        border: none;
+        font-size: 17px;
+        padding: none;
+    }
+    .sidebar-content-child{
+        margin-top: 47px;
+        padding-left: 50px;
+        position: fixed;
+        right:5%;
+    }
+    .banner-container{
+        height: 400px;
+        width: 360px;
+        background-color: #404040;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+    .banner-container img{
+        height: 500px;
     }
 </style>
 
