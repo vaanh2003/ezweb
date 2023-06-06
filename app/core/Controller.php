@@ -1,9 +1,9 @@
 <?php 
 namespace larava\core;
 class Controller{
-    public function View($view,$data=[],$datathem=[],$layout="main"){
+    public function View($view,$data=[],$layout="main"){
         $contentLayout=$this->Layout($layout);
-        $contentView=$this->OnlyView($view,$data,$datathem);
+        $contentView=$this->OnlyView($view,$data);
         echo str_replace("{{content}}",$contentView, $contentLayout);
     }
     public function Layout($layout){
