@@ -26,49 +26,16 @@
                     <div class="AppSidebarContentChild">
                 <h2 class="">CÂU HỎI</h2>
                 <div class="question-content">
-                    <?php
-                        
-                        foreach ($data as $key => $value){
-                            echo "
-                                <div class='question'>
-                                    <div class='question-item'>
-                                        <div class='question-item-one'>
-                                            <div class='question-name-user'>
-                                                <img class='img-user' src='./img/good-review.png' alt=''>
-                                                <p>tran văn anh</p>
-                                            </div>
-                                            <div class='dropdown '>
-                                                <button class='btn btn-secondary ' type='button' data-bs-toggle='dropdown' aria-expanded='false'>
-                                                    <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-three-dots' viewBox='0 0 16 16'>
-                                                        <path d='M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z'/>
-                                                    </svg>
-                                                </button>
-                                                <ul class='dropdown-menu dropdown-menu-end'>
-                                                    <li><a class='dropdown-item' href='#'>Xóa câu hỏi</a></li>
-                                                    <li><a class='dropdown-item' href='#'>Sửa câu hỏi</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class='question-item-tow'>
-                                            <h4>".$value['noi_dung']."</h4>
-                                            <div class='date-time'>
-                                                <p>".$value['ngay_gio']."</p>
-                                                <div class='number-cmt'>
-                                                    <p>".$value['tra_loi']."</p>
-                                                    <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-chat-left-dots' viewBox='0 0 16 16'>
-                                                        <path d='M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z'/>
-                                                        <path d='M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z'/>
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            
-                            ";
+                     <?php
+                        var_dump($data);
+                        echo '</br>';
+                        echo '</br>';
+                        echo '</br>';
+                        foreach ($data as $key => $value) {
+                             echo '<p>'.$value[6].'</p.';
                         }
                     
-                    ?>
+                    ?>  
                     
                 </div>
             </div>
