@@ -369,9 +369,6 @@
         align-items: center;
         justify-content: space-between;
     }
-    .date-time p{
-        font-size:15px;
-    }
     .date-time svg{
         margin-top: 2px;
         margin-right: 5px;
@@ -416,7 +413,7 @@
         right:5%;
     }
     .banner-container{
-        height: 400px;
+        height: 430px;
         width: 360px;
         background-color: #404040;
         border-radius: 20px;
