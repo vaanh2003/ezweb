@@ -23,6 +23,6 @@ class BlogController extends Controller{
             }
         }
         
-        $this->View("blog/index",$listCauHoi);
+        $this->View("blog/index",$list);
     }
 }

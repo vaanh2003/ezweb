@@ -23,39 +23,6 @@
     </div>
     <div class="App_withSidebarContent__o4VlQ">
         <div class="App_withSidebarContent__o4VlQ App_withSidebarContent__o4VlQ-db">
-            <section class="index-module_col__2EQm9 index-module_c-12__u7UXF index-module_m-12__2CxUL index-module_l-8__yebHm">
-                <div class="Blog_leftLayout__Kuc0z">
-                    <div class="TopicsList_wrapper__lizCe">
-                        <h3>Các chủ đề được đề xuất</h3>
-                        <ul class="TopicsList_topics__EU6iM">
-                            <li><a href="/blog/topic/front-end-mobile-apps">Front-end / Mobile apps</a></li>
-                            <li><a href="/blog/topic/back-end-devops">Back-end / Devops</a></li>
-                            <li><a href="/blog/topic/ui-ux-design">UI / UX / Design</a></li>
-                            <li><a href="/blog/topic/others">Others</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <div class="PostItem_body__Fnfo-">
-                            <div class="PostItem_info__DZr39">
-                                <a href="/blog/hoc-vien-funix-lac-duong-toi-f8.html">
-                                    <h2 class="PostItem_title__8lSHm">Học viên Funix lạc đường tới F8</h2>
-                                </a>
-                                <p class="PostItem_desc__be9G8">Mình đã tham gia khóa học lập trình 6 tháng ở funix và cũng có nhiều lý do khác dẫn đến quá hạn quá học và cũng đã hoàn thành 4...</p>
-                                <div class="PostItem_info__DZr39">
-                                    <a class="PostItem_tags__0M1lV" href="/blog/tag/reactjs?page=1">ReactJS</a>
-                                    <span>một tháng trước</span>
-                                    <span class="PostItem_dot__ZYdFt">·</span>1 phút đọc</div>
-                                </div>
-                                <div class="PostItem_thumb__m4iXl">
-                                    <a href="/blog/hoc-vien-funix-lac-duong-toi-f8.html">
-                                        <img src="https://files.fullstack.edu.vn/f8-prod/blog_posts/7256/64448752c63c4.jpg" alt="Học viên Funix lạc đường tới F8">
-                                    </a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                    <section class="index-module_col__2EQm9 index-module_c-12__u7UXF index-module_m-12__2CxUL index-module_l-4__3tf5p">
-                    <h1>
                     <div class="AppSidebarContentChild">
                 <h2 class="">CÂU HỎI</h2>
                 <div class="question-content">
@@ -68,7 +35,7 @@
                                         <div class='question-item-one'>
                                             <div class='question-name-user'>
                                                 <img class='img-user' src='./img/good-review.png' alt=''>
-                                                <p>".$value."</p>
+                                                <p>tran văn anh</p>
                                             </div>
                                             <div class='dropdown '>
                                                 <button class='btn btn-secondary ' type='button' data-bs-toggle='dropdown' aria-expanded='false'>
@@ -83,11 +50,11 @@
                                             </div>
                                         </div>
                                         <div class='question-item-tow'>
-                                            <h4>".$value."</h4>
+                                            <h4>".$value['noi_dung']."</h4>
                                             <div class='date-time'>
-                                                <p>".$value."</p>
+                                                <p>".$value['ngay_gio']."</p>
                                                 <div class='number-cmt'>
-                                                    <p>".$value."</p>
+                                                    <p>".$value['tra_loi']."</p>
                                                     <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-chat-left-dots' viewBox='0 0 16 16'>
                                                         <path d='M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z'/>
                                                         <path d='M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z'/>
@@ -114,7 +81,6 @@
                     <img src='https://inkythuatso.com/uploads/thumbnails/800/2022/03/anh-genshin-impact-4k-klee-17-10-24-48.jpg' alt=''>
                 </div>
             </div>
-            </section>
         </div>
         </h1>
     </div>
