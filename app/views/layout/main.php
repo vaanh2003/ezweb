@@ -30,7 +30,16 @@
             </div>
         </div>
         <div class="NavBar_actions__nSNzo">
+        <?php
+            if(isset($_SESSION['username']) && ($_SESSION['username']!="")){
+                echo '<li><a href="index.php?act=userinfo">'.$_SESSION['username'].'</a></li>';
+                echo '<li><a href="index.php?act=thoat">Đăng xuất</a></li>';
+            }else{
+        ?>
             <div id="navbar-actions-portal"></div><a href="#" class="NavBar_loginBtn__5DxZL">Đăng nhập</a>
+        <?php } ?>
+
+            
         </div>
     </div>
     <div class="App_withSidebar__8lwIi">
