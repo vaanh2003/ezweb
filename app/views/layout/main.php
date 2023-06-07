@@ -390,7 +390,11 @@
     }
     .dropdown-menu{
         position: absolute;
-        padding-left: 100px;
+        padding-left: 0px;
+        right: 1px;
+    }
+    .cha-dropdown-menu{
+        position: relative;
     }
     .button-container{
         width: 360px;
@@ -421,6 +425,9 @@
     }
     .banner-container img{
         height: 500px;
+    }
+    #dropdown-menu{
+        display: none;
     }
 </style>
 
