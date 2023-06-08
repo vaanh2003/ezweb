@@ -182,6 +182,7 @@ body{
                         </div>
                     </div>
                     <form method="post">
+                        <input type="hidden" name="idkhoahoc" value="'.$value['khoa_hoc_id'].'">
                         <input type="hidden" name="idvd" value="'.$value['id'].'">
                 
                 ';
@@ -200,7 +201,7 @@ body{
                 <?php
                 
                     foreach ($data as $key => $value) { ?>
-                        <a href="<?php echo base_url; ?>video?idvd=<?php echo''.$value['id'].''?>">
+                        <a href="<?php echo base_url; ?>video?idvd=<?php echo''.$_SESSION["idkhoahoc"].''; echo '&id='.$value['id'].'';?>">
                         <?php echo '
                             <div class="item-video-in-list '; 
                             foreach ($_SESSION["video"] as $key => $session) {
