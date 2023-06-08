@@ -13,8 +13,6 @@ class VideoController extends Controller{
         $idvd=isset($_GET['idvd'])?$_GET['idvd']:"";
 
         $videoone=isset($_GET['id'])?$_GET['id']:"";
-        var_dump($idvd);
-        var_dump($videoone);
         $list=$this->categories::where("khoa_hoc_id",$idvd)->get();
         $_SESSION["idkhoahoc"]=$idvd;
         $_SESSION["video"]=$this->categories::where("id",$videoone)->get(); 
@@ -26,7 +24,6 @@ class VideoController extends Controller{
         $this->View("video/index",$list);
     }
     public function dieuhuong(){
-        var_dump($_SESSION["idkhoahoc"]);
         if(isset($_POST['baitiep'])){
             $idvd=isset($_POST['idvd'])?$_POST['idvd']:"";
             $idkhoahoc=isset($_POST['idkhoahoc'])?$_POST['idkhoahoc']:"";
