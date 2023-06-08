@@ -17,4 +17,12 @@ class KhoaHocController extends Controller
         $list = $this->categories::all();
         $this->View("khoahoc/index", $list);
     }
+    public function ttkhoahoc()
+    {
+        $id = isset($_GET['id']) ? $_GET['id'] : "";
+        if ($id != "") {
+            $cate = $this->categories::where("id", $id)->get();
+        }
+        $this->View("khoahoc/ttkhoahoc", $cate);
+    }
 }

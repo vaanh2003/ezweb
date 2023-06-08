@@ -13,9 +13,11 @@ $router = new Router;
 
 $router->get("/", [HomeController::class, "index"]);
 $router->get("/home", [HomeController::class, "index"]);
-$router->get("/khoahoc", [KhoaHocController::class, "index"]);
 $router->get("/about", [AboutController::class, "index"]);
 $router->get("/blog", [BlogController::class, "index"]);
+
+$router->get("/khoahoc", [KhoaHocController::class, "index"]);
+$router->get("/ttkhoahoc", [KhoaHocController::class, "ttkhoahoc"]);
 
 $router->get("/video", [VideoController::class, "index"]);
 $router->post("/video", [VideoController::class, "dieuhuong"]);
