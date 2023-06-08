@@ -1,4 +1,26 @@
-    <div class="App_sidebarWrap__3LwsB">
+<style>
+    .question-content{
+        width: 85%;
+        height: 500px;
+    }
+    .question-content form textarea{
+        width: 100%;
+        height: 350px;
+        border-radius: 20px;
+    }
+    .question-content form button{
+        width: 130px;
+        height: 45px;
+        border: none;
+        border-radius: 5px;
+        background-color: #7CF500;
+        color: white;
+        font-size: 20px;
+        font-weight: 600;
+        float: right;
+    }
+</style>
+<div class="App_sidebarWrap__3LwsB">
         <div class="Sidebar_wrapper__kUJFm" id="sidebar">
             <ul class="Sidebar_list__HnCzM">
                 <li><a aria-current="page" class="Sidebar_itemBtn__Q78b7" href="<?php echo base_url; ?>home"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="house" class="svg-inline--fa fa-house " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
@@ -23,72 +45,20 @@
     </div>
     <div class="App_withSidebarContent__o4VlQ">
         <div class="App_withSidebarContent__o4VlQ App_withSidebarContent__o4VlQ-db">
-                    <div class="AppSidebarContentChild">
+            <div class="AppSidebarContentChild">
                 <h2 class="">CÂU HỎI</h2>
                 <div class="question-content">
-                     <?php
-                     $i=0;
-                        foreach ($data as $key => $value) {
-                            $i++;
-                            echo "
-                            <div class='question'>
-                                <div class='question-item'>
-                                    <div class='question-item-one'>
-                                        <div class='question-name-user'>
-                                            <img class='img-user' src='./img/good-review.png' alt=''>
-                                            <p>".$value[6]."</p>
-                                        </div>
-                                        <div class='cha-dropdown-menu'>
-                                            <button id='dropdown-button' onclick='toggleDropdown(".$i.")''>
-                                                <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-three-dots' viewBox='0 0 16 16'>
-                                                    <path d='M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z'/>
-                                                </svg>
-                                            </button>
-                                            <ul class='dropdown-menu' id='myDropdown".$i."'>
-                                                <li><a class='dropdown-item' href='#'>Xóa câu hỏi</a></li>
-                                                <li><a class='dropdown-item' href='#'>Sửa câu hỏi</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class='question-item-tow'>
-                                        <h4>".$value[4]."</h4>
-                                        <div class='date-time'>
-                                            <p>".$value[3]."</p>
-                                            <div class='number-cmt'>
-                                                <p>".$value[5]."</p>
-                                                <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-chat-left-dots' viewBox='0 0 16 16'>
-                                                    <path d='M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z'/>
-                                                    <path d='M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z'/>
-                                                </svg>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    <form method="post">
+                        <input type="hidden" name="iduser" value="<?php
+                        
+                            echo ''.$_SESSION['user'][1].''
                             
                         
-                        ";
-                        }
-                    
-                ?>
-                <script>
-                                // Lấy tham chiếu đến các phần tử HTML
-                                var dropdownVisible = false;
-
-                                function toggleDropdown($a) {
-                                    $b="myDropdown";
-                                    $c=$b+$a;
-                                var dropdownMenu = document.getElementById($c);
-                                dropdownVisible = !dropdownVisible;
-
-                                if (dropdownVisible) {
-                                    dropdownMenu.style.display = "block";
-                                } else {
-                                    dropdownMenu.style.display = "none";
-                                }
-                                }
-                            </script>
-                </div>
+                        ?>">
+                        <textarea name="message"></textarea></br>
+                        <button type="submit">Gửi</button>
+                    </form>
+                </div>               
             </div>
             <div class='sidebar-content-child'>
                 <div class='button-container'>
