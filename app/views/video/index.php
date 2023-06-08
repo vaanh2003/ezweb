@@ -175,7 +175,7 @@ body{
                         </div>
                         <div class="item-noi-dung">
                             <div>
-                                <p class="noi-dung">'.$value['ten'].'</p>
+                                <p class="noi-dung">'.$value['name'].'</p>
                                 <p class="ngay-thang"> cập nhật tháng 2 năm 2023</p>
                             </div>
                             <button>+ Thêm vào xem sau</button>
@@ -212,7 +212,7 @@ body{
                             
                             echo '">
                                 <div>
-                                    <p>1. '.$value['ten'].'</p>
+                                    <p>'.$value['name'].'</p>
                                     <div>
                                         <img src="./img/play.png" alt="">
                                         <p>'.$value['thoi_luong'].'</p>
