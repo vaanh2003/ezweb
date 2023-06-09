@@ -52,10 +52,10 @@
                         <input type="hidden" name="iduser" value="<?php
                         
                             echo ''.$_SESSION['user'][1].''
-                            
+
                         
                         ?>">
-                        <textarea name="message"></textarea></br>
+                        <textarea name="message" placeholder="Viết câu hỏi của bạn"></textarea></br>
                         <button type="submit">Gửi</button>
                     </form>
                 </div>               
