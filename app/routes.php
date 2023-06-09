@@ -3,6 +3,7 @@
 use larava\core\Router;
 use larava\controllers\HomeController;
 use larava\controllers\KhoaHocController;
+use larava\controllers\TaiLieuController;
 use larava\controllers\AboutController;
 use larava\controllers\BlogController;
 use larava\controllers\ContactController;
@@ -29,6 +30,9 @@ $router->post("/cauhoi", [CauHoiController::class, "upcauhoi"]);
 
 $router->get("/khoahoc", [KhoaHocController::class, "index"]);
 $router->get("/ttkhoahoc", [KhoaHocController::class, "ttkhoahoc"]);
+
+$router->get("/tailieu", [TaiLieuController::class, "index"]);
+$router->get("/tttailieu", [TaiLieuController::class, "tttailieu"]);
 
 $router->get("/video", [VideoController::class, "index"]);
 $router->post("/video", [VideoController::class, "dieuhuong"]);
