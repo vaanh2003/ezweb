@@ -9,6 +9,8 @@ use larava\controllers\ContactController;
 use larava\controllers\CategoryController;
 use larava\controllers\VideoController;
 use larava\controllers\CauHoiController;
+use larava\controllers\SuaCauHoiController;
+use larava\controllers\XoaController;
 
 $router = new Router;
 
@@ -16,6 +18,11 @@ $router->get("/", [HomeController::class, "index"]);
 $router->get("/home", [HomeController::class, "index"]);
 $router->get("/about", [AboutController::class, "index"]);
 $router->get("/blog", [BlogController::class, "index"]);
+
+$router->get("/sua_cau_hoi", [SuaCauHoiController::class, "index"]);
+$router->post("/sua_cau_hoi", [SuaCauHoiController::class, "uplai"]);
+
+$router->get("/xoa_cau_hoi", [XoaController::class, "index"]);
 
 $router->get("/cauhoi", [CauHoiController::class, "index"]);
 $router->post("/cauhoi", [CauHoiController::class, "upcauhoi"]);

@@ -33,7 +33,7 @@ class CauHoiController extends Controller
                 'user_id' => $iduser,
                 'ngay_gio' => $ngaygio,
             ]);
-            
+            header("location:".base_url."blog");
         }
     }
 }

@@ -42,27 +42,6 @@ class BlogController extends Controller{
             $i++;
             
         }
-        // $_SESSION['sonho']=[];
-        // foreach ($number as $key => $solonnhi) {
-        //     if($a==""){
-        //         $a=$solonnhi;
-        //         var_dump($a);
-        //     }else{
-        //         $b=$solonnhi;
-        //         if($a-$b>=0){
-        //             array_push($_SESSION['sonho'],$b);
-        //             $b="";
-        //         }
-        //         else{
-        //             array_push($_SESSION['sonho'],$a);
-        //             $a=$b;
-        //             $b="";
-
-        //         }
-        //     }
-        // }
-        // $solonnhi=max($_SESSION['sonho']);
-        // var_dump($solonnhi);
         $this->View("blog/index",$listCauHoi);
     }
 }

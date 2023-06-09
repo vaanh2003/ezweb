@@ -393,6 +393,10 @@
         padding-left: 0px;
         right: 1px;
     }
+    .dropdown-menu li button{
+        width: 100%;
+        background-color: white;
+    }
     .cha-dropdown-menu{
         position: relative;
     }
