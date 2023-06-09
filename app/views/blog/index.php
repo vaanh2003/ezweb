@@ -18,44 +18,50 @@
                 <li><a class="Sidebar_itemBtn__Q78b7" href="<?php echo base_url; ?>contact"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
                             <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z" />
                         </svg><span>Liên Hệ</span></a></li>
+                <li><a class="Sidebar_itemBtn__Q78b7" href="<?php echo base_url; ?>tailieu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="icon icon-tabler icon-tabler-files" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M15 3v4a1 1 0 0 0 1 1h4"></path>
+                            <path d="M18 17h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h4l5 5v7a2 2 0 0 1 -2 2z"></path>
+                            <path d="M16 17v2a2 2 0 0 1 -2 2h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h2"></path>
+                        </svg><span>Tài Liệu</span></a></li>
             </ul>
         </div>
     </div>
     <div class="App_withSidebarContent__o4VlQ">
         <div class="App_withSidebarContent__o4VlQ App_withSidebarContent__o4VlQ-db">
-                    <div class="AppSidebarContentChild">
+            <div class="AppSidebarContentChild">
                 <h2 class="">CÂU HỎI</h2>
                 <div class="question-content">
-                     <?php
-                     $i=0;
-                        foreach ($data as $key => $value) {
-                            $i++;
-                            echo "
+                    <?php
+                    $i = 0;
+                    foreach ($data as $key => $value) {
+                        $i++;
+                        echo "
                             <div class='question'>
                                 <div class='question-item'>
                                     <div class='question-item-one'>
                                         <div class='question-name-user'>
                                             <img class='img-user' src='./img/good-review.png' alt=''>
-                                            <p>".$value[6]."</p>
+                                            <p>" . $value[6] . "</p>
                                         </div>
                                         <div class='cha-dropdown-menu'>
-                                            <button id='dropdown-button' onclick='toggleDropdown(".$i.")''>
+                                            <button id='dropdown-button' onclick='toggleDropdown(" . $i . ")''>
                                                 <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-three-dots' viewBox='0 0 16 16'>
                                                     <path d='M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z'/>
                                                 </svg>
                                             </button>
-                                            <ul class='dropdown-menu' id='myDropdown".$i."'>
-                                                <li><a class='dropdown-item' href='".base_url."sua_cau_hoi?idcauhoi=".$value[0]."'>Sửa câu hỏi</a></li>
-                                                <li><a class='dropdown-item' href='".base_url."xoa_cau_hoi?idcauhoi=".$value[0]."'>xóa câu hỏi</a></li>
+                                            <ul class='dropdown-menu' id='myDropdown" . $i . "'>
+                                                <li><a class='dropdown-item' href='" . base_url . "sua_cau_hoi?idcauhoi=" . $value[0] . "'>Sửa câu hỏi</a></li>
+                                                <li><a class='dropdown-item' href='" . base_url . "xoa_cau_hoi?idcauhoi=" . $value[0] . "'>xóa câu hỏi</a></li>
                                             </ul>
                                         </div>
                                     </div>
                                     <div class='question-item-tow'>
-                                        <h4>".$value[4]."</h4>
+                                        <h4>" . $value[4] . "</h4>
                                         <div class='date-time'>
-                                            <p>".$value[3]."</p>
+                                            <p>" . $value[3] . "</p>
                                             <div class='number-cmt'>
-                                                <p>".$value[5]."</p>
+                                                <p>" . $value[5] . "</p>
                                                 <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-chat-left-dots' viewBox='0 0 16 16'>
                                                     <path d='M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z'/>
                                                     <path d='M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z'/>
@@ -68,31 +74,31 @@
                             
                         
                         ";
+                    }
+
+                    ?>
+                    <script>
+                        // Lấy tham chiếu đến các phần tử HTML
+                        var dropdownVisible = false;
+
+                        function toggleDropdown($a) {
+                            $b = "myDropdown";
+                            $c = $b + $a;
+                            var dropdownMenu = document.getElementById($c);
+                            dropdownVisible = !dropdownVisible;
+
+                            if (dropdownVisible) {
+                                dropdownMenu.style.display = "block";
+                            } else {
+                                dropdownMenu.style.display = "none";
+                            }
                         }
-                    
-                ?>
-                <script>
-                                // Lấy tham chiếu đến các phần tử HTML
-                                var dropdownVisible = false;
-
-                                function toggleDropdown($a) {
-                                    $b="myDropdown";
-                                    $c=$b+$a;
-                                var dropdownMenu = document.getElementById($c);
-                                dropdownVisible = !dropdownVisible;
-
-                                if (dropdownVisible) {
-                                    dropdownMenu.style.display = "block";
-                                } else {
-                                    dropdownMenu.style.display = "none";
-                                }
-                                }
-                            </script>
+                    </script>
                 </div>
             </div>
             <div class='sidebar-content-child'>
                 <div class='button-container'>
-                    <a href="<?php echo base_url;?>cauhoi?iduser=<?php echo ''.$_SESSION['user'][1].''?>">
+                    <a href="<?php echo base_url; ?>cauhoi?iduser=<?php echo '' . $_SESSION['user'][1] . '' ?>">
                         <button>Đặt câu hỏi</button>
                     </a>
                     <button>Đăng Blog</button>
@@ -104,4 +110,3 @@
         </div>
         </h1>
     </div>
-    
