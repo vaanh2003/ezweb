@@ -12,6 +12,7 @@ use larava\controllers\VideoController;
 use larava\controllers\CauHoiController;
 use larava\controllers\SuaCauHoiController;
 use larava\controllers\XoaController;
+use larava\controllers\UserController;
 
 $router = new Router;
 
@@ -24,6 +25,8 @@ $router->get("/sua_cau_hoi", [SuaCauHoiController::class, "index"]);
 $router->post("/sua_cau_hoi", [SuaCauHoiController::class, "uplai"]);
 
 $router->get("/xoa_cau_hoi", [XoaController::class, "index"]);
+
+$router->get("/user", [UserController::class, "index"]);
 
 $router->get("/cauhoi", [CauHoiController::class, "index"]);
 $router->post("/cauhoi", [CauHoiController::class, "upcauhoi"]);
