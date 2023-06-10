@@ -69,7 +69,7 @@
             </div>
             <div class='sidebar-content-child'>
                 <div class='button-container'>
-                    <a href="<?php echo base_url;?>cauhoi?iduser=<?php echo ''.$_SESSION['user'][1].''?>">
+                    <a href="<?php echo base_url;?>cauhoi?iduser=<?php echo ''.$_SESSION['username']['id'].''?>">
                         <button>Đặt câu hỏi</button>
                     </a>
                     <button>Đăng Blog</button>

@@ -98,9 +98,26 @@
             </div>
             <div class='sidebar-content-child'>
                 <div class='button-container'>
-                    <a href="<?php echo base_url; ?>cauhoi?iduser=<?php echo '' . $_SESSION['user'][1] . '' ?>">
-                        <button>Đặt câu hỏi</button>
-                    </a>
+                    <?php
+                    if(isset($_SESSION['username'])){
+                        echo '
+                    
+                        <a href="'.base_url.'cauhoi?iduser=' . $_SESSION['username']['id'] . '">
+                            <button>Đặt câu hỏi</button>
+                        </a>
+                    
+                    ';
+                    }else{
+                        echo '
+                    
+                        <a href="'.base_url.'login">
+                            <button>Đặt câu hỏi</button>
+                        </a>
+                    
+                    ';
+                    }
+                    
+                    ?>
                     <button>Đăng Blog</button>
                 </div>
                 <div class='banner-container'>

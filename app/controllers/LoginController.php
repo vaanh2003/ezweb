@@ -23,7 +23,7 @@ class LoginController extends Controller
         if ($check) {
             $userinfo = $check->getAttributes();
             $_SESSION['username'] = $userinfo;
-            
+            var_dump($_SESSION['username']);
             header("location:home");
             
         } else {
