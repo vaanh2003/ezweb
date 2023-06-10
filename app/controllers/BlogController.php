@@ -17,7 +17,6 @@ class BlogController extends Controller{
     public function __construct(){
         $this->categories=$this->Model('CauHoiModel');
         $this->thongTinUser=$this->Model('UserModel');
-        $_SESSION['user']=["tranvananh",1];
     }
     public function index()
     {

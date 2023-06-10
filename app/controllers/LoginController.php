@@ -23,7 +23,9 @@ class LoginController extends Controller
         if ($check) {
             $userinfo = $check->getAttributes();
             $_SESSION['username'] = $userinfo;
+            
             header("location:home");
+            
         } else {
             $_SESSION['message'] = 'Tên đăng nhập hoặc mật khẩu không đúng';
             header('location:login');

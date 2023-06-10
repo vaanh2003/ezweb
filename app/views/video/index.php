@@ -201,7 +201,7 @@ body{
                 <?php
                 
                     foreach ($data as $key => $value) { ?>
-                        <a href="<?php echo base_url; ?>video?idvd=<?php echo''.$_SESSION["idkhoahoc"].''; echo '&id='.$value['id'].'';?>">
+                        <a href="<?php echo base_url; ?>video?idkhoahoc=<?php echo''.$_SESSION["idkhoahoc"].''; echo '&idvd='.$value['id'].'';?>">
                         <?php echo '
                             <div class="item-video-in-list '; 
                             foreach ($_SESSION["video"] as $key => $session) {

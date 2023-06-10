@@ -4,15 +4,16 @@ use larava\core\Controller;
 class VideoController extends Controller{
     public $categories; 
     public $video;
-    public $idvd; 
+    public $idvd;
+    public $a;
+    public $b; 
     public function __construct(){
         $this->categories=$this->Model('VideoModel');
     }
 
     public function index(){
-        $idvd=isset($_GET['idvd'])?$_GET['idvd']:"";
-
-        $videoone=isset($_GET['id'])?$_GET['id']:"";
+        $idvd=isset($_GET['idkhoahoc'])?$_GET['idkhoahoc']:"";
+        $videoone=isset($_GET['idvd'])?$_GET['idvd']:"";
         $list=$this->categories::where("khoa_hoc_id",$idvd)->get();
         $_SESSION["idkhoahoc"]=$idvd;
         $_SESSION["video"]=$this->categories::where("id",$videoone)->get(); 
@@ -24,17 +25,45 @@ class VideoController extends Controller{
         $this->View("video/index",$list);
     }
     public function dieuhuong(){
+        $a=0;
+        $b=0;
         if(isset($_POST['baitiep'])){
             $idvd=isset($_POST['idvd'])?$_POST['idvd']:"";
             $idkhoahoc=isset($_POST['idkhoahoc'])?$_POST['idkhoahoc']:"";
             $idvd+=1;
-            header("location:/ezweb/video?idvd=".$idkhoahoc."&id=".$idvd."");
+            $listvideo=$this->categories::where("khoa_hoc_id",$idkhoahoc)->get();
+            foreach ($listvideo as $key => $value) {
+                if($value['id']==$idvd){
+                    $a=1;
+                }
+            }
+            if($a==1){
+                var_dump('aaaa');
+                header("location:/ezweb/video?idkhoahoc=".$idkhoahoc."&idvd=".$idvd."");
+            }else{
+                $idvd=$idvd-1;
+                header("location:/ezweb/video?idkhoahoc=".$idkhoahoc."&idvd=".$idvd."");
+            }
+
+            
         }
         if(isset($_POST['baitruoc'])){
             $idvd=isset($_POST['idvd'])?$_POST['idvd']:"";
             $idkhoahoc=isset($_POST['idkhoahoc'])?$_POST['idkhoahoc']:"";
             $idvd-=1;
-            header("location:/ezweb/video?idvd=".$idkhoahoc."&id=".$idvd."");
+            $listvideo=$this->categories::where("khoa_hoc_id",$idkhoahoc)->get();
+            foreach ($listvideo as $key => $value) {
+                if($value['id']==$idvd){
+                    $a=1;
+                }
+            }
+            if($a==1){
+                var_dump('aaaa');
+                header("location:/ezweb/video?idkhoahoc=".$idkhoahoc."&idvd=".$idvd."");
+            }else{
+                $idvd=$idvd+1;
+                header("location:/ezweb/video?idkhoahoc=".$idkhoahoc."&idvd=".$idvd."");
+            }
         }
 
     }
