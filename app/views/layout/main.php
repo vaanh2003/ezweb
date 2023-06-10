@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EZWeb</title>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
 
@@ -30,16 +29,28 @@
             </div>
         </div>
         <div class="NavBar_actions__nSNzo">
-        <?php
-            if(isset($_SESSION['username']) && ($_SESSION['username']!="")){
-                echo '<li><a href="index.php?act=userinfo">'.$_SESSION['username'].'</a></li>';
-                echo '<li><a href="index.php?act=thoat">Đăng xuất</a></li>';
-            }else{
-        ?>
-            <div id="navbar-actions-portal"></div><a href="#" class="NavBar_loginBtn__5DxZL">Đăng nhập</a>
-        <?php } ?>
-
-            
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <ul class="navbar-nav">
+                    <?php if (isset($_SESSION['username'])) : ?>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Xin chào, <?= $_SESSION['username']['name'] ?>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Thay đổi thông tin</a></li>
+                                <li><a class="dropdown-item" href="<?php echo base_url; ?>logout">Đăng xuất</a></li>
+                            </ul>
+                        </li>
+                    <?php else : ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?php echo base_url; ?>login">Đăng nhập</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?php echo base_url; ?>signup">Đăng ký</a>
+                        </li>
+                    <?php endif ?>
+                </ul>
+            </nav>
         </div>
     </div>
     <div class="App_withSidebar__8lwIi">
@@ -52,18 +63,22 @@
                     <div class="Footer_bottom__J7kjW">
                         <p class="Footer_copyright__2WB24">©2023 EZ WEB. Nền tảng học lập trình hàng đầu Việt Nam</p>
                         <div class="Footer_social-list__gg6vl"><a class="Footer_social-item__GydUc social-item-first Footer_youtube__p9tJ3" href="https://www.youtube.com/c/F8VNOfficial" title="EZ Web trên Youtube" target="_blank" rel="noreferrer"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="youtube-square" class="svg-inline--fa fa-youtube-square " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                    <path fill="currentColor" d="M186.8 202.1l95.2 54.1-95.2 54.1V202.1zM448 80v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48zm-42 176.3s0-59.6-7.6-88.2c-4.2-15.8-16.5-28.2-32.2-32.4C337.9 128 224 128 224 128s-113.9 0-142.2 7.7c-15.7 4.2-28 16.6-32.2 32.4-7.6 28.5-7.6 88.2-7.6 88.2s0 59.6 7.6 88.2c4.2 15.8 16.5 27.7 32.2 31.9C110.1 384 224 384 224 384s113.9 0 142.2-7.7c15.7-4.2 28-16.1 32.2-31.9 7.6-28.5 7.6-88.1 7.6-88.1z"></path>
+                                    <path fill="currentColor" d="M186.8 202.1l95.2 54.1-95.2 54.1V202.1zM448 80v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48zm-42 176.3s0-59.6-7.6-88.2c-4.2-15.8-16.5-28.2-32.2-32.4C337.9 128 224 128 224 128s-113.9 0-142.2 7.7c-15.7 4.2-28 16.6-32.2 32.4-7.6 28.5-7.6 88.2-7.6 88.2s0 59.6 7.6 88.2c4.2 15.8 16.5 27.7 32.2 31.9C110.1 384 224 384 224 384s113.9 0 142.2-7.7c15.7-4.2 28-16.1 32.2-31.9 7.6-28.5 7.6-88.1 7.6-88.1z">
+                                    </path>
                                 </svg></a><a class="Footer_social-item__GydUc Footer_facebook__9kuWE" href="https://www.facebook.com/groups/f8official" title="EZ Web trên Facebook" target="_blank" rel="noreferrer"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-square" class="svg-inline--fa fa-facebook-square " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                    <path fill="currentColor" d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.3V327.7h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0 -48-48z"></path>
+                                    <path fill="currentColor" d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.3V327.7h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0 -48-48z">
+                                    </path>
                                 </svg></a><a class="Footer_social-item__GydUc Footer_tiktok__OiXpU" href="https://www.tiktok.com/@f8official" title="EZ Web trên Tiktok" target="_blank" rel="noreferrer"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="tiktok" class="svg-inline--fa fa-tiktok " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                    <path fill="currentColor" d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.25V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.62 74.62 0 1 0 52.23 71.18V0l88 0a121.2 121.2 0 0 0 1.86 22.17h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.14z"></path>
+                                    <path fill="currentColor" d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.25V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.62 74.62 0 1 0 52.23 71.18V0l88 0a121.2 121.2 0 0 0 1.86 22.17h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.14z">
+                                    </path>
                                 </svg></a></div>
                     </div>
                 </section>
             </section>
         </section>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
+    </script>
 </body>
 <style>
     body {
@@ -316,20 +331,24 @@
             margin-right: -8px;
         }
     }
+
     /* mới */
-    .App_withSidebarContent__o4VlQ-db{
+    .App_withSidebarContent__o4VlQ-db {
         display: flex;
     }
-    .AppSidebarContentChild{
+
+    .AppSidebarContentChild {
         padding-left: 90px;
         width: 65%;
     }
-    .question-item{
+
+    .question-item {
         padding: 25px 25px 20px 25px;
         height: 70%;
         width: 100%;
     }
-    .question{
+
+    .question {
         width: 100%;
         height: auto;
         border-radius: 13px;
@@ -338,75 +357,92 @@
         align-items: center;
         margin-bottom: 20px;
     }
-    .question-item-one{
+
+    .question-item-one {
         display: flex;
         justify-content: space-between;
     }
-    .question-name-user{
+
+    .question-name-user {
         display: flex;
         align-items: center;
     }
-    .question-name-user img{
+
+    .question-name-user img {
         width: 30px;
         height: 30px;
     }
-    .question-name-user p{
+
+    .question-name-user p {
         margin-left: 10px;
         font-size: 12px;
         margin-bottom: 0;
     }
-    .question-item-one{
+
+    .question-item-one {
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
-    .question-item-one button{
+
+    .question-item-one button {
         background-color: #f5f5f5;
         border: none;
     }
-    .date-time{
+
+    .date-time {
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
-    .date-time svg{
+
+    .date-time svg {
         margin-top: 2px;
         margin-right: 5px;
     }
-    .number-cmt{
+
+    .number-cmt {
         display: flex;
         align-items: center;
     }
-    .number-cmt p{
+
+    .number-cmt p {
         margin-right: 3px;
         margin-bottom: 0;
     }
-    .dropdown button{
+
+    .dropdown button {
         background-color: #f5f5f5;
         color: #000;
     }
-    .dropdown button:hover{
+
+    .dropdown button:hover {
         background-color: #f5f5f5;
     }
-    .dropdown-menu{
+
+    .dropdown-menu {
         position: absolute;
         padding-left: 0px;
         right: 1px;
     }
-    .dropdown-menu li button{
+
+    .dropdown-menu li button {
         width: 100%;
         background-color: white;
     }
-    .cha-dropdown-menu{
+
+    .cha-dropdown-menu {
         position: relative;
     }
-    .button-container{
+
+    .button-container {
         width: 360px;
         display: flex;
         justify-content: space-between;
         margin-bottom: 20px;
     }
-    .button-container button{
+
+    .button-container button {
         width: 165px;
         height: 65px;
         border-radius: 15px;
@@ -414,23 +450,27 @@
         font-size: 17px;
         padding: none;
     }
-    .sidebar-content-child{
+
+    .sidebar-content-child {
         margin-top: 47px;
         padding-left: 50px;
         position: fixed;
-        right:5%;
+        right: 5%;
     }
-    .banner-container{
+
+    .banner-container {
         height: 430px;
         width: 360px;
         background-color: #404040;
         border-radius: 20px;
         overflow: hidden;
     }
-    .banner-container img{
+
+    .banner-container img {
         height: 500px;
     }
-    #dropdown-menu{
+
+    #dropdown-menu {
         display: none;
     }
 </style>
