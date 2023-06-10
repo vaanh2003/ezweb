@@ -27,6 +27,8 @@ $router->post("/sua_cau_hoi", [SuaCauHoiController::class, "uplai"]);
 
 $router->get("/xoa_cau_hoi", [XoaController::class, "index"]);
 
+$router->get("/user", [UserController::class, "index"]);
+
 $router->get("/cauhoi", [CauHoiController::class, "index"]);
 $router->post("/cauhoi", [CauHoiController::class, "upcauhoi"]);
 
