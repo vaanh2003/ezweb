@@ -12,6 +12,8 @@ use larava\controllers\VideoController;
 use larava\controllers\CauHoiController;
 use larava\controllers\SuaCauHoiController;
 use larava\controllers\XoaController;
+use larava\controllers\LoginController;
+use larava\controllers\SignupController;
 
 $router = new Router;
 
@@ -45,6 +47,13 @@ $router->get("/delcate", [CategoryController::class, "delCate"]);
 
 $router->get("/editcate", [CategoryController::class, "editCate"]);
 $router->post("/editcate", [CategoryController::class, "updateCate"]);
+
+$router->get("/login", [LoginController::class, "login"]);
+$router->get("/logout", [LoginController::class, "logout"]);
+$router->post('/getlogin', [LoginController::class, "getlogin"]);
+
+$router->get("/signup", [SignupController::class, "signup"]);
+$router->post("/addUser", [SignupController::class, "addUser"]);
 
 $router->post("/contact", function () {
     echo "Trang Liên Hệ POST";

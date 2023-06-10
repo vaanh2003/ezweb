@@ -29,11 +29,11 @@ class SignupController extends Controller
                 $this->register::insert($data);
                 header('location:login');
             } else if ($data['password'] != $repass) {
-                $_SESSION['error'] = "Mat khau phai trung nhau";
+                $_SESSION['error'] = "Mật khẩu phải giống nhau";
                 return $this->View("signup/signup");
             }
         } else {
-            $_SESSION['error'] = "Tai khoan da ton tai";
+            $_SESSION['error'] = "Tài khoản này đã tồn tại";
             return $this->View("signup/signup");
         }
     }
