@@ -21,11 +21,11 @@
         </div>
         <div class="header_img">
             <?php if (isset($_SESSION['username'])) : ?>
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown" style="list-style: none;">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Xin chào, <?= $_SESSION['username']['name'] ?>
                     </a>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu ">
                         <li><a class="dropdown-item" href="#">Thay đổi thông tin</a></li>
                         <li><a class="dropdown-item" href="<?php echo base_url; ?>logout">Đăng xuất</a></li>
                     </ul>
