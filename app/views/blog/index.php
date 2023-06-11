@@ -1,4 +1,4 @@
-<div class="App_withSidebarContent__o4VlQ">
+<div class="App_withSidebarContent__o4VlQ" style="min-height: 1200px;">
     <div class="App_withSidebarContent__o4VlQ App_withSidebarContent__o4VlQ-db">
         <div class="AppSidebarContentChild">
             <h2 class="">CÂU HỎI</h2>

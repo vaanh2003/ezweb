@@ -46,7 +46,7 @@
                     <a href="<?php echo base_url; ?>blog" class="nav_link"><i class='bx bx-message-square-detail nav_icon'></i><span class="nav_name">Cộng Đồng</span> </a>
                     <a href="<?php echo base_url; ?>contact" class="nav_link"> <i class='bx bx-phone'></i> <span class="nav_name">Liên Hệ</span> </a>
                 </div>
-            </div> <a href="#" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">SignOut</span> </a>
+            </div> <a href="<?php echo base_url; ?>logout" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">SignOut</span> </a>
         </nav>
     </div>
     <!--Container Main start-->
@@ -403,5 +403,148 @@
         .body-pd {
             padding-left: calc(var(--nav-width) + 188px)
         }
+    }
+
+    .App_withSidebarContent__o4VlQ-db {
+        display: flex;
+    }
+
+    .AppSidebarContentChild {
+        padding-left: 90px;
+        width: 65%;
+    }
+
+    .question-item {
+        padding: 25px 25px 20px 25px;
+        height: 70%;
+    }
+
+    .question {
+        width: 100%;
+        height: auto;
+        border-radius: 13px;
+        background-color: #f5f5f5;
+        display: flex;
+        align-items: center;
+    }
+
+    .question-item-one {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .question-name-user {
+        display: flex;
+        align-items: center;
+    }
+
+    .question-name-user img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .question-name-user p {
+        margin-left: 10px;
+        font-size: 12px;
+        margin-bottom: 0;
+    }
+
+    .question-item-one {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .question-item-one button {
+        background-color: #f5f5f5;
+        border: none;
+    }
+
+    .date-time {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .date-time svg {
+        margin-top: 2px;
+        margin-right: 5px;
+    }
+
+    .number-cmt {
+        display: flex;
+        align-items: center;
+    }
+
+    .number-cmt p {
+        margin-right: 3px;
+        margin-bottom: 0;
+    }
+
+    .dropdown button {
+        background-color: #f5f5f5;
+        color: #000;
+    }
+
+    .dropdown button:hover {
+        background-color: #f5f5f5;
+    }
+
+    .dropdown-menu {
+        position: absolute;
+        padding-left: 0px;
+        right: 1px;
+    }
+
+    .dropdown-menu li button {
+        width: 100%;
+        background-color: white;
+    }
+
+    .cha-dropdown-menu {
+        position: relative;
+    }
+
+    .button-container {
+        width: 360px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+
+    .button-container button {
+        width: 165px;
+        height: 65px;
+        border-radius: 15px;
+        border: none;
+        font-size: 17px;
+        padding: none;
+    }
+
+
+    .sidebar-content-child {
+        margin-top: 47px;
+        padding-left: 50px;
+        position: fixed;
+        right: 5%;
+    }
+
+    .banner-container {
+        height: 430px;
+        width: 360px;
+        background-color: #404040;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+
+    .banner-container img {
+        height: 500px;
+    }
+
+
+    #dropdown-menu {
+        display: none;
     }
 </style>
