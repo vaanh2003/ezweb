@@ -38,11 +38,10 @@ class VideoController extends Controller{
                 }
             }
             if($a==1){
-                var_dump('aaaa');
-                header("location:/ezweb/video?idkhoahoc=".$idkhoahoc."&idvd=".$idvd."");
+                header("location:".base_url."video?idkhoahoc=".$idkhoahoc."&idvd=".$idvd."");
             }else{
                 $idvd=$idvd-1;
-                header("location:/ezweb/video?idkhoahoc=".$idkhoahoc."&idvd=".$idvd."");
+                header("location:".base_url."video?idkhoahoc=".$idkhoahoc."&idvd=".$idvd."");
             }
 
             
@@ -59,10 +58,10 @@ class VideoController extends Controller{
             }
             if($a==1){
                 var_dump('aaaa');
-                header("location:/ezweb/video?idkhoahoc=".$idkhoahoc."&idvd=".$idvd."");
+                header("location:".base_url."video?idkhoahoc=".$idkhoahoc."&idvd=".$idvd."");
             }else{
                 $idvd=$idvd+1;
-                header("location:/ezweb/video?idkhoahoc=".$idkhoahoc."&idvd=".$idvd."");
+                header("location:".base_url."video?idkhoahoc=".$idkhoahoc."&idvd=".$idvd."");
             }
         }
 
