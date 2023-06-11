@@ -68,8 +68,10 @@
                             style="background-image: url(&quot;<?php echo $data[0]['img']; ?>&quot;);"></div>
                     </div>
                     <h5>Miễn phí</h5>
-                    <button class="Button_btn__RW1e2 Button_primary__86yfm CourseDetail_learnNow__A3hLp">ĐĂNG KÝ
-                        HỌC</button>
+                    <form action="" method="post">
+                        <input type="hidden" name="idkhoahoc" value="<?php echo $data[0]['id']; ?>">
+                        <button type="submit" name="dangkykh" class="Button_btn__RW1e2 Button_primary__86yfm CourseDetail_learnNow__A3hLp">ĐĂNG KÝ HỌC</button>
+                    </form>
                     <ul>
                         <li><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="gauge-high"
                                 class="svg-inline--fa fa-gauge-high CourseDetail_icon__sLJtd" role="img"
