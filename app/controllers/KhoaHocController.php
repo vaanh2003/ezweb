@@ -11,6 +11,7 @@ class KhoaHocController extends Controller
     public $categories;
     public $khoahoc;
     public $a;
+    public $list=array();
     public function __construct()
     {
         $this->video = $this->Model('VideoModel');
@@ -31,8 +32,13 @@ class KhoaHocController extends Controller
         $id = isset($_GET['id']) ? $_GET['id'] : "";
         if ($id != "") {
             $cate = $this->categories::where("id", $id)->get();
+            $listvideo = $this->video::where("khoa_hoc_id",  $id)->get();
+            $count = $listvideo->count();
+            $list = $cate->toArray();;
+            array_push($list, $count);
         }
-        $this->View("khoahoc/ttkhoahoc", $cate);
+        
+        $this->View("khoahoc/ttkhoahoc", $list);
     }
     public function dangky(){
         $a=0;
@@ -57,6 +63,9 @@ class KhoaHocController extends Controller
          }else{
             header("location:".base_url."login");
          }
+        // $cate = $this->video::where("khoa_hoc_id", 2)->get();
+        // $count = $cate->count();
+        // var_dump($count);
     }
 
 }
