@@ -34,6 +34,7 @@ $router->post("/cauhoi", [CauHoiController::class, "upcauhoi"]);
 
 $router->get("/khoahoc", [KhoaHocController::class, "index"]);
 $router->get("/ttkhoahoc", [KhoaHocController::class, "ttkhoahoc"]);
+$router->post("/ttkhoahoc", [KhoaHocController::class, "dangky"]);
 
 $router->get("/tailieu", [TaiLieuController::class, "index"]);
 $router->get("/tttailieu", [TaiLieuController::class, "tttailieu"]);
