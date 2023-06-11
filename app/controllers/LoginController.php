@@ -22,10 +22,10 @@ class LoginController extends Controller
         $check = $this->user::where('email', $email)->where('password', $password)->first();
         if ($check) {
             $userinfo = $check->getAttributes();
+            $_SESSION['email'];
             $_SESSION['username'] = $userinfo;
             var_dump($_SESSION['username']);
             header("location:home");
-            
         } else {
             $_SESSION['message'] = 'Tên đăng nhập hoặc mật khẩu không đúng';
             header('location:login');

@@ -5,4 +5,3 @@ class UserModel extends Model {
 	public $timestamps=false;
 	public $fillable=['id','name','role','password','email','img'];
 }
-?>

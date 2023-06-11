@@ -14,6 +14,7 @@ use larava\controllers\SuaCauHoiController;
 use larava\controllers\XoaController;
 use larava\controllers\LoginController;
 use larava\controllers\SignupController;
+use larava\controllers\UserController;
 
 $router = new Router;
 
