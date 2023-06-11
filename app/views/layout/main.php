@@ -415,6 +415,8 @@
     }
 
     .question-item {
+        width: 95%;
+        margin:0 auto;
         padding: 25px 25px 20px 25px;
         height: 70%;
     }

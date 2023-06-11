@@ -29,7 +29,7 @@
 
     .item-section-left {
         width: 78%;
-        height: 100vh;
+        height: 90vh;
         overflow: auto;
     }
 
@@ -37,7 +37,7 @@
         right: 0;
         position: absolute;
         width: 22%;
-        height: 100vh;
+        height: 85vh;
         overflow: auto;
         scrollbar-width: 0px;
         scrollbar-color: red;
@@ -154,7 +154,7 @@
     .item-button-section {
         position: absolute;
         width: 100%;
-        bottom: 0px;
+        bottom: 60px;
         height: 50px;
         background-color: #F0F0F0;
     }
@@ -263,44 +263,14 @@
             }
 
                 ?>
-                <!-- <div class="item-video-in-list video-play">
-                    <div>
-                        <p>1. bạn sẽ làm được gì sau khóa học</p>
-                        <div>
-                            <img src="./img/play.png" alt="">
-                            <p>31:15</p>
-                        </div>  
-                    </div>
-                    <img src="./img/agree-removebg-preview.png" alt="">
-                  </div> -->
-                <!-- <div class="item-video-in-list video-history">
-                    <div>
-                        <p>1. bạn sẽ làm được gì sau khóa học</p>
-                        <div>
-                            <img src="./img/play.png" alt="">
-                            <p>31:15</p>
-                        </div>  
-                    </div>
-                    <img src="./img/agree-removebg-preview.png" alt="">
-                  </div>
-                  <div class="item-video-in-list video-no-see">
-                    <div>
-                        <p>1. bạn sẽ làm được gì sau khóa học</p>
-                        <div>
-                            <img src="./img/play.png" alt="">
-                            <p>31:15</p>
-                        </div>  
-                    </div>
-                    <img src="./img/no-gree.jpg" alt="">
-                  </div> -->
-        </div>
 
     </div>
+    
 </section>
 <div class="item-button-section">
-    <div>
-        <input class="button-left" type="submit" value="< BÀI TRƯỚC" name="baitruoc">
-        <input class="button-right" type="submit" value="BÀI TIẾP THEO >" name="baitiep">
-        </form>
+        <div>
+            <input class="button-left" type="submit" value="< BÀI TRƯỚC" name="baitruoc">
+            <input class="button-right" type="submit" value="BÀI TIẾP THEO >" name="baitiep">
+            </form>
+        </div>
     </div>
-</div>
