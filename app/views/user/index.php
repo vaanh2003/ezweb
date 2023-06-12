@@ -2574,7 +2574,8 @@ body {
                             <img src="<?php echo $value['img'] ?>" alt="Hình <?php echo $value['name'] ?>"
                                 class="w-1/3 rounded-xl">
                             <div class="ml-3">
-                                <h2 class="mb-1 font-bold"><a href="#"><?php echo $value['name'] ?></a>
+                                <h2 class="mb-1 font-bold"><a
+                                        href="<?php echo base_url; ?>ttkhoahoc/<?php echo $value['id'] ?>"><?php echo $value['name'] ?></a>
                                 </h2>
                                 <p class="text-sm"><?php echo $value['mo_ta'] ?></p>
                             </div>

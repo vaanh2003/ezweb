@@ -19,7 +19,7 @@ class UserController extends Controller
     public function index()
     {
         $ketqua =
-            $this->khoaHoc::select('khoa_hoc.name', 'khoa_hoc.mo_ta', 'khoa_hoc.img')
+            $this->khoaHoc::select('khoa_hoc.name', 'khoa_hoc.mo_ta', 'khoa_hoc.img', 'khoa_hoc.id')
             ->from('khoa_hoc')
             ->join('history_khoa_hoc', 'khoa_hoc.id', '=', 'history_khoa_hoc.khoa_hoc_id')
             ->join('user', 'history_khoa_hoc.user_id', '=', 'user.id')
