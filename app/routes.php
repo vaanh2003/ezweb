@@ -44,6 +44,7 @@ $router->get("/video", [VideoController::class, "index"]);
 $router->post("/video", [VideoController::class, "dieuhuong"]);
 
 $router->get("/contact", [ContactController::class, "form"]);
+$router->post("/guimail", [ContactController::class, "guimail"]);
 
 $router->get("/category", [CategoryController::class, "index"]);
 $router->post("/category", [CategoryController::class, "addCate"]);
