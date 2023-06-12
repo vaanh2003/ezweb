@@ -2564,27 +2564,25 @@ body {
                         Email: <?= $_SESSION['username']['email'] ?>
                     </div>
                 </div>
-                <div></div>
             </div>
             <div class="col-span-3">
+                <h3 class="text-lg font-bold">Khoá học đã tham gia</h3>
+                <?php foreach ($data as $key => $value) { ?>
                 <div class="p-5 rounded-lg shadow">
-                    <h3 class="text-lg font-bold">Khoá học đã tham gia</h3>
                     <ul class="mt-3 space-y-5">
-                        <li class="flex pb-5 border-b last:border-b-0 last:pb-0"><img
-                                src="https://fpoly.site/storage/10/2.png" alt="HTML CSS từ Zero đến Hero"
+                        <li class="flex pb-5 border-b last:border-b-0 last:pb-0">
+                            <img src="<?php echo $value['img'] ?>" alt="Hình <?php echo $value['name'] ?>"
                                 class="w-1/3 rounded-xl">
                             <div class="ml-3">
-                                <h2 class="mb-1 font-bold"><a
-                                        href="https://fpoly.site/courses/html-css-tu-zero-den-hero">HTML CSS từ Zero
-                                        đến
-                                        Hero</a></h2>
-                                <p class="text-sm">Trong khóa này chúng ta sẽ cùng nhau xây dựng giao diện 2 trang
-                                    web
-                                    là The Band &amp; Shopee.</p>
+                                <h2 class="mb-1 font-bold"><a href="#"><?php echo $value['name'] ?></a>
+                                </h2>
+                                <p class="text-sm"><?php echo $value['mo_ta'] ?></p>
                             </div>
                         </li>
                     </ul>
                 </div>
+                <?php } ?>
+
             </div>
         </div>
     </div>
