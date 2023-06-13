@@ -35,10 +35,9 @@ class KhoaHocController extends Controller
             $cate = $this->categories::where("id", $id)->get();
             $listvideo = $this->video::where("khoa_hoc_id",  $id)->get();
             $count = $listvideo->count();
-            $list = $cate->toArray();;
+            $list = $cate->toArray();
             array_push($list, $count);
         }
-
         $this->View("khoahoc/ttkhoahoc", $list);
     }
     public function dangky()
