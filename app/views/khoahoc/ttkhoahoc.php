@@ -15,12 +15,26 @@
                         </div>
                     </div>
                     <h5>Miễn phí</h5>
-                    <form action="" method="post">
-                        <input type="hidden" name="idkhoahoc" value="<?php echo $data[0]['id']; ?>">
-                        <button type="submit" name="dangkykh"
-                            class="Button_btn__RW1e2 Button_primary__86yfm CourseDetail_learnNow__A3hLp">ĐĂNG KÝ
-                            HỌC</button>
-                    </form>
+                    <?php
+                    $temp = 0;
+                    foreach ($data[2] as $key => $value) {
+                        if ($value['khoa_hoc_id'] == $data[0]['id']) {
+                            echo '<button type="submit" name="dangkykh"
+                                class="Button_btn__RW1e_2 Button_primary__86yfm_2 CourseDetail_learnNow__A3hLp">ĐÃ ĐĂNG KÝ
+                            HỌC</button>';
+                            $temp++;
+                        }
+                    }
+                    if ($temp == 0) {
+                        echo '<form action="" method="post">
+                        <input type="hidden" name="idkhoahoc" value="' . $data[0]['id'] . '">
+                    <button type="submit" name="dangkykh"
+                        class="Button_btn__RW1e2 Button_primary__86yfm CourseDetail_learnNow__A3hLp">ĐĂNG KÝ
+                        HỌC</button>
+                    </form>';
+                    }
+                    ?>
+
                     <ul>
                         <li><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="gauge-high"
                                 class="svg-inline--fa fa-gauge-high CourseDetail_icon__sLJtd" role="img"
@@ -156,6 +170,27 @@ h1 {
 .Button_btn__RW1e2.Button_primary__86yfm {
     background-color: #0d6efd;
     color: white;
+}
+
+.Button_btn__RW1e_2.Button_primary__86yfm_2 {
+    color: white;
+}
+
+.Button_primary__86yfm_2 {
+    background-color: #4723D9;
+}
+
+.Button_btn__RW1e_2 {
+    appearance: none;
+    border: 1px solid #4723D9;
+    border-radius: 999px !important;
+    display: inline-block;
+    font-weight: 600;
+    outline: none;
+    text-align: center;
+    transition: .3s ease;
+    user-select: none;
+    white-space: nowrap;
 }
 
 .Button_btn__RW1e2 {

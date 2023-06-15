@@ -33,10 +33,17 @@ class KhoaHocController extends Controller
         $id = isset($_GET['id']) ? $_GET['id'] : "";
         if ($id != "") {
             $cate = $this->categories::where("id", $id)->get();
+            $list = $cate->toArray();
+
             $listvideo = $this->video::where("khoa_hoc_id",  $id)->get();
             $count = $listvideo->count();
-            $list = $cate->toArray();
-            array_push($list, $count);
+
+            $History = $this->khoahoc::all();
+            $listHistory = $History->toArray();
+            // echo "<pre>";
+            // print_r($listHistory);
+            // echo "</pre>";
+            array_push($list, $count, $listHistory);
         }
         $this->View("khoahoc/ttkhoahoc", $list);
     }
