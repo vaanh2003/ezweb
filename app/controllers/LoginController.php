@@ -15,20 +15,24 @@ class LoginController extends Controller
     {
         $this->View("login/login");
     }
-    public function getlogin()
+    public function getLogin()
     {
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-        $check = $this->user::where('email', $email)->where('password', $password)->first();
-        if ($check) {
-            $userinfo = $check->getAttributes();
-            $_SESSION['email'];
-            $_SESSION['username'] = $userinfo;
-            var_dump($_SESSION['username']);
-            header("location:home");
-        } else {
-            $_SESSION['message'] = 'Tên đăng nhập hoặc mật khẩu không đúng';
-            header('location:login');
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $email = $_POST['email'];
+            $password = $_POST['password'];
+            $check = $this->user::where('email', $email)->where('password', $password)->first();
+            if ($check) {
+                $userinfo = $check->getAttributes();
+                $_SESSION['email'] = $userinfo['email']; // Lưu email vào SESSION
+                $_SESSION['username'] = $userinfo;
+                var_dump($_SESSION['username']); // Lưu username vào SESSION
+                header("location: home"); // Chuyển hướng đến trang home.php
+                exit();
+            } else {
+                $_SESSION['message'] = 'Tên đăng nhập hoặc mật khẩu không đúng';
+                header('location: login'); // Chuyển hướng đến trang login.php
+                exit();
+            }
         }
     }
     public function logout()
