@@ -14,6 +14,7 @@ use larava\controllers\SuaCauHoiController;
 use larava\controllers\XoaController;
 use larava\controllers\LoginController;
 use larava\controllers\SignupController;
+use larava\controllers\UserController;
 
 $router = new Router;
 
@@ -35,6 +36,7 @@ $router->post("/cauhoi", [CauHoiController::class, "upcauhoi"]);
 $router->get("/khoahoc", [KhoaHocController::class, "index"]);
 $router->get("/ttkhoahoc", [KhoaHocController::class, "ttkhoahoc"]);
 $router->post("/ttkhoahoc", [KhoaHocController::class, "dangky"]);
+$router->get("/daThamGia", [KhoaHocController::class, "daThamGia"]);
 
 $router->get("/tailieu", [TaiLieuController::class, "index"]);
 $router->get("/tttailieu", [TaiLieuController::class, "tttailieu"]);
@@ -43,6 +45,7 @@ $router->get("/video", [VideoController::class, "index"]);
 $router->post("/video", [VideoController::class, "dieuhuong"]);
 
 $router->get("/contact", [ContactController::class, "form"]);
+$router->post("/guimail", [ContactController::class, "guimail"]);
 
 $router->get("/category", [CategoryController::class, "index"]);
 $router->post("/category", [CategoryController::class, "addCate"]);

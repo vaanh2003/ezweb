@@ -27,7 +27,7 @@
                         Xin chào, <?= $_SESSION['username']['name']; ?>
                     </a>
                     <ul class="dropdown-menu ">
-                        <li><a class="dropdown-item" href="#">Thay đổi thông tin</a></li>
+                        <li><a class="dropdown-item" href="<?php echo base_url; ?>user">Thay đổi thông tin</a></li>
                         <li><a class="dropdown-item" href="<?php echo base_url; ?>logout">Đăng xuất</a></li>
                     </ul>
                 </li>
@@ -40,15 +40,19 @@
     </header>
     <div class="l-navbar" id="nav-bar">
         <nav class="nav">
-            <div> <a href="<?php echo base_url; ?>home" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span class="nav_logo-name">EZ WEB</span> </a>
+            <div> <a href="<?php echo base_url; ?>home" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i>
+                    <span class="nav_logo-name">EZ WEB</span> </a>
                 <div class="nav_list">
                     <a href="<?php echo base_url; ?>home" class="nav_link active"> <i class='bx bx-grid-alt nav_icon'></i> <span class="nav_name">Home</span> </a>
                     <a href="<?php echo base_url; ?>khoahoc" class="nav_link"> <i class='bx bx-book-open'></i> <span class="nav_name">Khoá Học</span> </a>
-                    <a href="<?php echo base_url; ?>tailieu" class="nav_link"> <i class='bx bx-folder nav_icon'></i> <span class="nav_name">Tài Liệu</span> </a>
-                    <a href="<?php echo base_url; ?>blog" class="nav_link"><i class='bx bx-message-square-detail nav_icon'></i><span class="nav_name">Cộng Đồng</span> </a>
+                    <a href="<?php echo base_url; ?>tailieu" class="nav_link"> <i class='bx bx-folder nav_icon'></i>
+                        <span class="nav_name">Tài Liệu</span> </a>
+                    <a href="<?php echo base_url; ?>blog" class="nav_link"><i class='bx bx-message-square-detail nav_icon'></i><span class="nav_name">Cộng Đồng</span>
+                    </a>
                     <a href="<?php echo base_url; ?>contact" class="nav_link"> <i class='bx bx-phone'></i> <span class="nav_name">Liên Hệ</span> </a>
                 </div>
-            </div> <a href="<?php echo base_url; ?>logout" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">SignOut</span> </a>
+            </div> <a href="<?php echo base_url; ?>logout" class="nav_link"> <i class='bx bx-log-out nav_icon'></i>
+                <span class="nav_name">SignOut</span> </a>
         </nav>
     </div>
     <!--Container Main start-->
@@ -64,7 +68,8 @@
             </div>
             <div class="col-sm-6 col-md-4 footer-contacts">
                 <div><span class="fa fa-map-marker footer-contacts-icon"> </span>
-                    <p><span class="new-line-span">Tòa nhà T, QTSC9, Tô Ký</span>Quận 12, Thành phố Hồ Chí Minh, Việt Nam</p>
+                    <p><span class="new-line-span">Tòa nhà T, QTSC9, Tô Ký</span>Quận 12, Thành phố Hồ Chí Minh, Việt
+                        Nam</p>
                 </div>
                 <div><i class="fa fa-phone footer-contacts-icon"></i>
                     <p class="footer-center-info email text-left"> +84 </p>
@@ -418,7 +423,7 @@
 
     .question-item {
         width: 95%;
-        margin:0 auto;
+        margin: 0 auto;
         padding: 25px 25px 20px 25px;
         height: 70%;
     }

@@ -21,11 +21,11 @@ class LoginController extends Controller
         $password = $_POST['password'];
         $check = $this->user::where('email', $email)->where('password', $password)->first();
         if ($check) {
-            
             $userinfo = $check->getAttributes();
-            $_SESSION['username']=$userinfo;
+            $_SESSION['email'];
+            $_SESSION['username'] = $userinfo;
+            var_dump($_SESSION['username']);
             header("location:home");
-            
         } else {
             $_SESSION['message'] = 'Tên đăng nhập hoặc mật khẩu không đúng';
             header('location:login');
@@ -33,9 +33,7 @@ class LoginController extends Controller
     }
     public function logout()
     {
-        $_SESSION['username']='';
+        unset($_SESSION['username']);
         header('location:home');
-        var_dump($_SESSION['username']);
     }
-    
 }
