@@ -53,7 +53,7 @@ $router->post("/editcate", [CategoryController::class, "updateCate"]);
 
 $router->get("/login", [LoginController::class, "login"]);
 $router->get("/logout", [LoginController::class, "logout"]);
-$router->post('/getlogin', [LoginController::class, "getlogin"]);
+$router->post('/login', [LoginController::class, "getlogin"]);
 
 $router->get("/signup", [SignupController::class, "signup"]);
 $router->post("/addUser", [SignupController::class, "addUser"]);

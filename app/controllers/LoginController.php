@@ -21,9 +21,9 @@ class LoginController extends Controller
         $password = $_POST['password'];
         $check = $this->user::where('email', $email)->where('password', $password)->first();
         if ($check) {
+            
             $userinfo = $check->getAttributes();
-            $_SESSION['username'] = $userinfo;
-            var_dump($_SESSION['username']);
+            $_SESSION['username']=$userinfo;
             header("location:home");
             
         } else {
@@ -33,7 +33,9 @@ class LoginController extends Controller
     }
     public function logout()
     {
-        unset($_SESSION['username']);
+        $_SESSION['username']='';
         header('location:home');
+        var_dump($_SESSION['username']);
     }
+    
 }

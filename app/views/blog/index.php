@@ -73,9 +73,7 @@
                 if (isset($_SESSION['username'])) {
                     echo '
                     
-                        <a href="' . base_url . 'cauhoi?iduser=' . $_SESSION['username']['id'] . '">
-                            <button>Đặt câu hỏi</button>
-                        </a>
+                        ' . $_SESSION['username']['id'] . '
                     
                     ';
                 } else {

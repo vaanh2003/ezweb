@@ -20,16 +20,18 @@
             <button class="btn bg-white border d-flex align-items-center" type="button" id="button-addon1"><i class='bx bx-search '></i></button>
         </div>
         <div class="header_img">
-            <?php if (isset($_SESSION['username'])) : ?>
+            <?php if (isset($_SESSION['username'])&&$_SESSION['username']!='') : 
+                ?>
                 <li class="nav-item dropdown" style="list-style: none;">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Xin chào, <?= $_SESSION['username']['name'] ?>
+                        Xin chào, <?= $_SESSION['username']['name']; ?>
                     </a>
                     <ul class="dropdown-menu ">
                         <li><a class="dropdown-item" href="#">Thay đổi thông tin</a></li>
                         <li><a class="dropdown-item" href="<?php echo base_url; ?>logout">Đăng xuất</a></li>
                     </ul>
                 </li>
+                
             <?php else : ?>
                 <a href="<?php echo base_url; ?>login" class="btn btn-primary m-2">Đăng nhập</a>
                 <a href="<?php echo base_url; ?>signup" class="btn btn-primary m-2">Đăng ký</a>
