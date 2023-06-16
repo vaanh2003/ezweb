@@ -151,7 +151,7 @@
     }
     unset($_SESSION['message']);
     ?>
-    <form class="form-signin" action="<?php echo base_url; ?>getlogin" method="post">
+    <form class="form-signin" method="post">
         <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Đăng nhập</h1>
         <div class="social-login">
             <button class="btn facebook-btn social-btn" type="button"><span><i class="fab fa-facebook-f"></i> Đăng nhập
