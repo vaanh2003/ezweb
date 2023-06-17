@@ -2,6 +2,7 @@
     <div class="App_withSidebarContent__o4VlQ App_withSidebarContent__o4VlQ-db">
         <div class="AppSidebarContentChild">
             <h2 class="">CÂU HỎI</h2>
+            
             <div class="question-content">
                 <?php
                 $i = 0;
@@ -20,12 +21,25 @@
                                                 <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-three-dots' viewBox='0 0 16 16'>
                                                     <path d='M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z'/>
                                                 </svg>
-                                            </button>
-                                            <ul class='dropdown-menu' id='myDropdown" . $i . "'>
-                                                <li><a class='dropdown-item' href='" . base_url . "sua_cau_hoi?idcauhoi=" . $value[0] . "'>Sửa câu hỏi</a></li>
-                                                <li><a class='dropdown-item' href='" . base_url . "xoa_cau_hoi?idcauhoi=" . $value[0] . "'>xóa câu hỏi</a></li>
-                                            </ul>
-                                        </div>
+                                            </button>";
+                                            if($value[1]==$_SESSION['username']['id']){
+                                                echo "
+                                                    <ul class='dropdown-menu' id='myDropdown" . $i . "'>
+                                                        <li><a class='dropdown-item' href='" . base_url . "sua_cau_hoi?idcauhoi=" . $value[0] . "'>Sửa câu hỏi</a></li>
+                                                        <li><a class='dropdown-item' href='" . base_url . "xoa_cau_hoi?idcauhoi=" . $value[0] . "'>xóa câu hỏi</a></li>
+                                                    </ul>
+                                                
+                                                ";
+                                            }else{
+                                                echo "
+                                                    <ul class='dropdown-menu' id='myDropdown" . $i . "'>
+                                                        <li><a class='dropdown-item' href='" . base_url . "sua_cau_hoi?idcauhoi=" . $value[0] . "'>Chặn</a></li>
+                                                    </ul>
+                                                ";
+                                            }
+                                           
+                                            
+                                        echo "</div>
                                     </div>
                                     <div class='question-item-tow'>
                                         <h4>" . $value[4] . "</h4>
@@ -33,10 +47,13 @@
                                             <p>" . $value[3] . "</p>
                                             <div class='number-cmt'>
                                                 <p>" . $value[5] . "</p>
-                                                <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-chat-left-dots' viewBox='0 0 16 16'>
-                                                    <path d='M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z'/>
-                                                    <path d='M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z'/>
-                                                </svg>
+                                                <a href='".base_url."binh_luan?idch=".$value[0]."'>
+                                                    <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-chat-left-dots' viewBox='0 0 16 16'>
+                                                        <path d='M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z'/>
+                                                        <path d='M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z'/>
+                                                    </svg>
+                                                </a>
+                                                
                                             </div>
                                         </div>
                                     </div>

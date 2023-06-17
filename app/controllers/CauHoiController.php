@@ -36,4 +36,9 @@ class CauHoiController extends Controller
             header("location:".base_url."blog");
         }
     }
+    public function binhluan(){
+        $idch = isset($_GET['idch']) ? $_GET['idch'] : "";
+        $listonech=$this->categories::where('id',$idch)->get();
+        $this->View("cauhoi/binhluan", $listonech);
+    }
 }
