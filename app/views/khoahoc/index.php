@@ -1,4 +1,4 @@
-<div class="App_withSidebarContent__o4VlQ">
+z<div class="App_withSidebarContent__o4VlQ">
     <div class="mb-4" style="margin: 0 40px;">
         <h1 class="DefaultLayout_heading__AvBHu">Khóa học</h1>
         <div class="MarkdownParser_wrapper__JYN63 DefaultLayout_desc__rr0iE">
@@ -24,7 +24,7 @@
                     <div class="CommonItem_wrapper__1FbHi Home_courseItem__aIeZ4"><a
                             class="CommonItem_thumb__ew8Jj CommonItem_has-link__VLLrX" title="Kiến Thức Nhập Môn IT"
                             target="_self" href="<?php echo base_url; ?>ttkhoahoc/<?php echo $value['id'] ?>"
-                            style="background-image: url(&quot;<?php echo $value['img'] ?>&quot;);  background-size: contain, cover"></a>
+                            style="background-image: url(&quot;<?php echo $value['img'] ?>&quot;);  "></a>
                         <h3 class="CommonItem_title__EpYrE"><a target="_self"
                                 href="<?php echo base_url; ?>ttkhoahoc/<?php echo $value['id'] ?>"><?php echo $value['name'] ?></a>
                         </h3>

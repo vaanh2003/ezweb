@@ -34,7 +34,7 @@
                         </path>
                     </svg></a>
             </div>
-        </div>z
+        </div>
         <div class="ScrollList_body__iMN-l">
             <section class="index-module_row__-AHgh">
                 <?php
