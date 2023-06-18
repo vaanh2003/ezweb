@@ -15,7 +15,7 @@
         height: 45px;
         border: none;
         border-radius: 5px;
-        background-color: #7CF500;
+        background-color: #66CC99;
         color: white;
         font-size: 20px;
         font-weight: 600;

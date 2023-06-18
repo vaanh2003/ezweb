@@ -20,10 +20,10 @@
         float: right;
     }
     .AppSidebarContentChild-item-cauhoi div{
-        border: #000 solid 2px;
         width: 85%;
         border-radius: 10px;
         min-height: 100px;
+        background:#f5f5f5;
     }
     .AppSidebarContentChild-item-cauhoi div p{
         padding: 10px 0 0 10px;
@@ -35,7 +35,7 @@
         margin-bottom: 0px;
     }
     .AppSidebarContentChild-item-traloi div{
-        background-color:#EEEEEE;
+        background-color:#CCECE6 ;
         width: 84%;
         border-radius: 10px;
     }
