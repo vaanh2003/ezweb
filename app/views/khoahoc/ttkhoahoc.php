@@ -8,7 +8,7 @@
             <section class="index-module_col__2EQm9 index-module_c-12__u7UXF index-module_m-12__2CxUL index-module_l-4__3tf5p">
                 <div class="CourseDetail_purchaseBadge__CZ9PK">
                     <div class="CourseDetail_imgPreview__qGZSi">
-                        <div class="CourseDetail_bg__Xacm8" style="background-size: contain, cover; background-image: url(&quot;<?php echo '.'.$data[0]['img'].''; ?>&quot;);"></div>
+                        <div class="CourseDetail_bg__Xacm8" style="background-image: url(&quot;<?php echo '.' . $data[0]['img'] . ''; ?>&quot;);"></div>
                     </div>
                     <h5>Miễn phí</h5>
                     <form action="" method="post">

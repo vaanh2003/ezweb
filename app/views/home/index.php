@@ -42,7 +42,7 @@
                     if ($value['id'] < 9) {
                 ?>
                         <section class="index-module_col__2EQm9 index-module_c-12__u7UXF index-module_m-4__30Uoi index-module_l-3__MjWvb">
-                            <div class="CommonItem_wrapper__1FbHi Home_courseItem__aIeZ4"><a class="CommonItem_thumb__ew8Jj CommonItem_has-link__VLLrX" title="Kiến Thức Nhập Môn IT" target="_self" href="<?php echo base_url; ?>ttkhoahoc/<?php echo $value['id'] ?>" style="background-image: url(&quot;<?php echo $value['img'] ?>&quot;);  background-size: contain, cover"></a>
+                            <div class="CommonItem_wrapper__1FbHi Home_courseItem__aIeZ4"><a class="CommonItem_thumb__ew8Jj CommonItem_has-link__VLLrX" title="Kiến Thức Nhập Môn IT" target="_self" href="<?php echo base_url; ?>ttkhoahoc/<?php echo $value['id'] ?>" style="background-image: url(&quot;<?php echo $value['img'] ?>&quot;)"></a>
                                 <h3 class="CommonItem_title__EpYrE"><a target="_self" href="<?php echo base_url; ?>ttkhoahoc/<?php echo $value['id'] ?>"><?php echo $value['name'] ?></a>
                                 </h3>
                                 <div class="CourseItem_students-count__92kIg"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="users" class="svg-inline--fa fa-users " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
