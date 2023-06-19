@@ -25,7 +25,25 @@ class KhoaHocController extends Controller
     }
     public function index()
     {
-        $list = $this->categories::all();
+        // $count =
+        //     $ketqua = $count->toArray();
+
+        // mã sql
+        // SELECT khoa_hoc.id, COUNT(DISTINCT history_khoa_hoc.user_id) AS so_nguoi_dang_ky
+        // FROM history_khoa_hoc
+        // JOIN khoa_hoc ON history_khoa_hoc.khoa_hoc_id = khoa_hoc.id
+        // GROUP BY khoa_hoc.id;
+
+
+        // echo "<pre>";
+        // echo print_r($ketqua);
+        // echo "</pre>";
+        // sửa
+        $list = $this->categories::select('khoa_hoc.*', $this->categories::raw('COUNT(DISTINCT history_khoa_hoc.user_id) AS so_nguoi_dang_ky'))
+            ->from('history_khoa_hoc')
+            ->join('khoa_hoc', 'history_khoa_hoc.khoa_hoc_id', '=', 'khoa_hoc.id')
+            ->groupBy('khoa_hoc.id')
+            ->get();
         $this->View("khoahoc/index", $list);
     }
     public function ttkhoahoc()
@@ -36,11 +54,12 @@ class KhoaHocController extends Controller
             $cate = $this->categories::where("id", $id)->get();
             $listvideo = $this->video::where("khoa_hoc_id",  $id)->get();
             $count = $listvideo->count();
-            $list = $cate->toArray();;
+            $list = $cate->toArray();
             array_push($list, $count);
         }
         $this->View("khoahoc/ttkhoahoc", $list);
     }
+
     public function dangky()
     {
         $a = 0;
