@@ -64,7 +64,6 @@ class KhoaHocController extends Controller
     {
         $a = 0;
         $ngaygio = $this->getCurrentDateTime();
-        if ((isset($_SESSION['username'])) && $_SESSION['username'] != []) {
             $idkhoahoc = isset($_POST['idkhoahoc']) ? $_POST['idkhoahoc'] : "";
             $listHistory = $this->khoahoc::where("user_id", $_SESSION['username']['id'])->get();
             foreach ($listHistory as $key => $value) {
@@ -72,18 +71,15 @@ class KhoaHocController extends Controller
                     $a = 1;
                 }
             }
-            if ($a == 0) {
-                $this->khoahoc::create([
-                    'khoa_hoc_id' => $idkhoahoc,
-                    'user_id' => $_SESSION['username']['id'],
-                    'ngay_gio' => $ngaygio
-                ]);
-            }
+            // if ($a == 0) {
+            //     $this->khoahoc::create([
+            //         'khoa_hoc_id' => $idkhoahoc,
+            //         'user_id' => $_SESSION['username']['id'],
+            //         'ngay_gio' => $ngaygio
+            //     ]);
+            // }
             $cate = $this->video::where("khoa_hoc_id", $idkhoahoc)->first();
             header("location:" . base_url . "video?idkhoahoc=" . $idkhoahoc . "&idvd=" . $cate['id'] . "");
-        } else {
-            header("location:" . base_url . "login");
-        }
         // $cate = $this->video::where("khoa_hoc_id", 2)->get();
         // $count = $cate->count();
         // var_dump($count);

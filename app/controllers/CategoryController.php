@@ -43,5 +43,7 @@ class CategoryController extends Controller{
                 "name"=>$name
             ]);
         header("location:/larava/category");
+        $_SESSION
+        $_COOKIE
     }
 }
